@@ -26,6 +26,7 @@ def getRandomName():
   return(quote.replace('_',' '))
 
 def rollDie(number,size):
+  # Rolls a NUMBER of SIZE-sided dice and adds the result
   list_dice = []
   result = ''
   sum = 0
@@ -39,8 +40,10 @@ def rollDie(number,size):
   result += str(list_dice[number-1])
   print(result)
   sum += list_dice[number-1]
-
-  end_string = "`"+result+"` or **"+str(sum)+"**"
+  if str(sum)==result:
+    end_string = "**"+result+"**"
+  else:
+    end_string = "`"+result+"` or **"+str(sum)+"**"
 
   return(end_string)
 
@@ -63,6 +66,7 @@ def remove_transparency(im, bg_colour=(255, 255, 255)):
         return im
 
 def getRandomFace():
+  # Generates a random female or male human face using campaignwiki.org
   image_url = ''
   #https://campaignwiki.org/face/render/alex/eyes_all_10.png_,mouth_all_10.png,chin_man_10.png_,ears_all_10.png_,nose_man_woman_dwarf_10.png_,hair_man_10.png
 
@@ -127,6 +131,7 @@ def getRandomFace():
 @client.event
 async def on_ready():
   print('We have logged in as {0.user}'.format(client))
+  await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="the others play dnd :/"))
 
 @client.event
 async def on_message(message):
@@ -161,6 +166,17 @@ async def on_message(message):
       face = getRandomFace()
 
       await message.channel.send(file=discord.File(face))
-keep_alive()
 
+    if message.content == '-wipe':
+      deleted = []
+      for i in range(3):
+        deleted += await message.channel.purge(limit=100)
+      await message.channel.send('Deleted {} message(s)'.format(len(deleted)))
+
+    if message.content == '-spam':
+      await message.channel.send('alright')
+      for i in range(100):
+        await message.channel.send(i)
+
+keep_alive()
 client.run(os.getenv('TOKEN'))
