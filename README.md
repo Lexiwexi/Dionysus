@@ -21,7 +21,7 @@ Dionysus also needs to be run from a server to work, preferably repl.it as it ha
 | command name       | function        |
 | ------------- |-------------|
 |-name | gets a random name from http://names.drycodes.com |
-|-r[number]d[sides] | rolls a NUMBER of dice with SIDES-sides |
+|-r[number(opt.)]d[sides] | rolls a NUMBER of dice with SIDES-sides |
 |-face| creates a face from https://campaignwiki.org/face/gallery/alex/random |
 |-wipe| wipes the last 300 messages if their age does not exceed 14 days |
 |-spam| spams a bunch (100) of messages |
