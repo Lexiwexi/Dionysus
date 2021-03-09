@@ -1,5 +1,5 @@
 # Dionysus v.0.0
-Dionysus is a discord bot written in python using the discord API for python and Flask for the temporary webserver. Command Documentation will follow soon.
+Dionysus is a discord bot written in python using the discord API for python and Flask for the temporary webserver. Best run over https://repl.it
 
 # Required:
 - Python 3.x
