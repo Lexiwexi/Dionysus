@@ -1,4 +1,16 @@
-# Dionysus - the Bot of wine and fests
-This is a discord bot I am currently building... and I don't even know why. Don't expect regular updates
+# Dionysus v.0.0
+Dionysus is a discord bot written in python using the discord API for python. Command Documentation will follow soon.
 
-Todo
+# Required:
+- Python 3.x
+- discordpy (discordpy.readthedocs.io/)
+
+
+# TO MAKE THIS CODE WORK...
+You will need to edit the following script to contain your bot Token
+- .env
+Dionysus also needs to be run from a server to work, preferably repl.it as it has been developed there. The code will set up it's own webpage to keep alive for a while but will eventually shut down. This is a work in progress.
+
+
+# Known Bugs:
+- None so far but I am not really bugtesting yet
