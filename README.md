@@ -3,7 +3,7 @@ Dionysus is a discord bot written in python using the discord API for python and
 
 # Required:
 - Python 3.x
-- discordpy (discordpy.readthedocs.io/)
+- discordpy (https://discordpy.readthedocs.io/)
 - Flask (https://flask.palletsprojects.com/en/1.1.x/)
 
 
